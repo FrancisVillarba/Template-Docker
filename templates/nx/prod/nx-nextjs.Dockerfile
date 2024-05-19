@@ -94,12 +94,6 @@ RUN apt-get update -y \
     && apt-get clean  \
     && rm -rf /var/lib/apt/lists/*
 
-# Development Dependencies
-RUN apt-get update -y \
-    && apt-get install --no-install-recommends -y vim curl \
-    && apt-get clean  \
-    && rm -rf /var/lib/apt/lists/*
-
 # Base Global Dependencies
 RUN npm i -g npm@latest
 RUN npm i -g nx@latest
