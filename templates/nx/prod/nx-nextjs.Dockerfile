@@ -61,6 +61,17 @@ RUN [ -n $PROJECTNAME ]
 COPY --from=dependencies /app/node_modules /app/node_modules
 RUN npm install --prefer-offline --no-audit
 
+# Installs Extra Dependency (Only If Running on ARM64)
+RUN if [ $(dpkg --print-architecture) = "arm64" ]; then \
+        echo $(dpkg --print-architecture); \
+        echo "Installing ARM dependencies"; \
+        npm i @next/swc-linux-arm64-gnu; \
+        npm i @next/swc-linux-arm64-musl; \
+    else \
+        echo "Skipping ARM dependencies"; \
+        echo $(dpkg --print-architecture); \
+    fi;
+
 # Copy project files
 COPY $HOST_PATH ./
 
