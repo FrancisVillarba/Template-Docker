@@ -2,7 +2,9 @@
 
 By Francis Villarba
 
-## Docker Templates - Nx
+## Docker Templates - NX
+
+See [NX MonoRepos](https://nx.dev/) for more information about NX
 
 DockerFiles that I have specifically used for projects running within NX.
 
