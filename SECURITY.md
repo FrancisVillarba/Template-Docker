@@ -1,10 +1,5 @@
 # Template Series
 
-**TO-DO**:
-Update the security policy as required by your organisation / project / team.
-
-This is a template / guide only.
-
 ## Security Policy
 
 FrancisVillarba takes the security of the software and products found within seriously,
